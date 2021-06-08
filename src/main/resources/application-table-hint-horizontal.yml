@@ -1,0 +1,44 @@
+#强制分片路由hint配置
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  shardingsphere:
+    props:
+      sql:
+        show: true
+    datasource:
+      # 数据源名称，多数据源以逗号分隔
+      names: m1,m2
+      m1:
+        url: jdbc:mysql://182.92.219.202:3306/sharding_db-1?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+        username: root
+        password: 15090667928Hh_
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        # 数据库连接池类名称  com.alibaba.druid.pool.DruidDataSource  com.zaxxer.hikari.HikariDataSource
+        type: com.alibaba.druid.pool.DruidDataSource
+      m2:
+        url: jdbc:mysql://182.92.219.202:3306/sharding_db-2?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+        username: root
+        password: 15090667928Hh_
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        # 数据库连接池类名称  com.alibaba.druid.pool.DruidDataSource  com.zaxxer.hikari.HikariDataSource
+        type: com.alibaba.druid.pool.DruidDataSource
+#    rules:
+    sharding:
+      tables:
+        course:
+          key-generator:
+            column: id
+            #主键生成策略 可选内置的 SNOWFLAKE(雪花算法)/UUID
+            # 也可以自定义(实现ShardingKeyGenerator,并配置META-INF/services/org.apache.shardingsphere.spi.keygen.ShardingKeyGenerator) SIMPLE
+            type: SNOWFLAKE
+          #配置 t_order 表规则  ->{a..b}  a必须存在，否则分布式主键无法获取
+          actual-data-nodes: m$->{1..2}.course_$->{2021..2200}0$->{1..9},m$->{1..2}.course_$->{2021..2200}$->{10..12}
+          database-strategy:
+            hint:
+              # 自定义分库hit分片算法
+              algorithm-class-name: com.xlhj.sharding.config.DatabaseHintShardingKeyAlgorithm
+          table-strategy:
+            hint:
+              # 自定义分表hit分片算法
+              algorithm-class-name: com.xlhj.sharding.config.TableHintShardingKeyAlgorithm

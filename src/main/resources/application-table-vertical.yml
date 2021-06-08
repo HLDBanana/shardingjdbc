@@ -1,0 +1,35 @@
+#垂直分表策略配置
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  shardingsphere:
+    props:
+      sql:
+        show: true
+    datasource:
+      # 数据源名称，多数据源以逗号分隔
+      names: m1,m2
+      m1:
+        password: 15090667928Hh_
+        url: jdbc:mysql://182.92.219.202:3306/sharding_db-1?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+        username: root
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        # 数据库连接池类名称  com.alibaba.druid.pool.DruidDataSource  com.zaxxer.hikari.HikariDataSource
+        type: com.alibaba.druid.pool.DruidDataSource
+      m2:
+        password: 15090667928Hh_
+        url: jdbc:mysql://182.92.219.202:3306/sharding_db-2?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+        username: root
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        # 数据库连接池类名称  com.alibaba.druid.pool.DruidDataSource  com.zaxxer.hikari.HikariDataSource
+        type: com.alibaba.druid.pool.DruidDataSource
+    sharding:
+      tables:
+        sys_user:
+          key-generator:
+            column: id
+            #主键生成策略 可选内置的 SNOWFLAKE(雪花算法)/UUID
+            # 也可以自定义(实现ShardingKeyGenerator,并配置META-INF/services/org.apache.shardingsphere.spi.keygen.ShardingKeyGenerator) SIMPLE
+            type: SNOWFLAKE
+          #垂直分库 做到专库专表  指定到具体库
+          actual-data-nodes: m2.sys_user

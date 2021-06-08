@@ -1,0 +1,62 @@
+# Tomcat
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  port: 8092
+
+spring:
+  # 环境 dev|test|prod
+  profiles:
+    # table-horizontal        水平分表（单分片字段）
+    # table-horizontal-columns 水平分表（多分片字段）
+    # table-time-horizontal   自定义水平分表 分库规则
+    # database-horizontal     水平分表分库
+    # table-vertical          垂直分表分库
+    # table-dict              操作公共表（字典表等）
+    # table-hint-horizontal   hint分片策略
+    active: table-horizontal
+  # jackson时间格式化
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+      enabled: true
+  mvc:
+    throw-exception-if-no-handler-found: true
+    static-path-pattern: /static/**
+  resources:
+    add-mappings: false
+  application:
+    name: springboot-sharding-JDBC
+
+#mybatis
+mybatis-plus:
+  mapper-locations: classpath:mapper/**/*.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.xlhj.sharding.entity
+  global-config:
+    #自定义SQL注入器
+    db-config:
+      #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+      id-type: input
+      #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+      field-strategy: NOT_NULL
+      #逻辑删除配置
+      logic-delete-value: -1
+      logic-not-delete-value: 0
+    #刷新mapper 调试神器
+    refresh: true
+  #    sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    call-setters-on-nulls: true
+
+logging:
+  level:
+    org.springframework.boot.autoconfigure: ERROR
+      ## 去掉CONDITIONS EVALUATION REPORT日志打印
+    io.swagger.models.parameters.AbstractSerializableParameter: error

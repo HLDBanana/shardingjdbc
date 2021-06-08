@@ -1,0 +1,15 @@
+
+{
+java:S22933"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ûìâ¿ýÿÿÿÿ8ö“›Àš/
+V
+java:S1128"4Remove this unused import 'java.time.LocalDateTime'.(æÃ§ƒüÿÿÿÿ8€“„‹š/
+F
+java:S1068")Remove this unused "today" private field.(¾¥Ë¦8€“„‹š/
+~
+java:S1488`"\Immediately return this expression instead of assigning it to the temporary variable "date".(¶øíˆùÿÿÿÿ8ïÊñ¿š/
+O
+java:S1068"-Remove this unused "yesterday" private field.(¸¢À‡ùÿÿÿÿ8€“„‹š/
+K
+java:S1068!")Remove this unused "month" private field.(ÏþÂñûÿÿÿÿ8€“„‹š/
+P
+java:S1068 ".Remove this unused "recentDays" private field.(ÑúïÛÿÿÿÿÿ8€“„‹š/

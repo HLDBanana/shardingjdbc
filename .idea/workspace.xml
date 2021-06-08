@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e04e62ad-a3aa-4bed-8223-4146ebe02674" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1t0QknbIeSlYs0FYFfrJe8hadIB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../datamiddle-dataService-query" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\D\test\springboot-sharding-JDBC\doc" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.xlhj.sharding.config" />
+      <recent name="com.xlhj.sharding.util" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\D\test\springboot-sharding-JDBC\src\main\resources" />
+      <recent name="C:\D\test\springboot-sharding-JDBC\src\main\java\com\xlhj\sharding\mapper" />
+      <recent name="C:\D\test\springboot-sharding-JDBC\src\main\resources\mapper" />
+      <recent name="C:\D\test\springboot-sharding-JDBC\src\main\java\com\xlhj\sharding\entity" />
+      <recent name="C:\D\test\SpringBoot-Integration\springboot-sharding-JDBC\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ShardApplicationTest.transactionTest">
+    <configuration name="ShardApplicationTest.addCourse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-sharding-JDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xlhj.sharding.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.xlhj.sharding" />
+      <option name="MAIN_CLASS_NAME" value="com.xlhj.sharding.ShardApplicationTest" />
+      <option name="METHOD_NAME" value="addCourse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShardApplicationTest.addDict" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-sharding-JDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xlhj.sharding.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.xlhj.sharding" />
+      <option name="MAIN_CLASS_NAME" value="com.xlhj.sharding.ShardApplicationTest" />
+      <option name="METHOD_NAME" value="addDict" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShardApplicationTest.bindingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-sharding-JDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xlhj.sharding.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.xlhj.sharding" />
+      <option name="MAIN_CLASS_NAME" value="com.xlhj.sharding.ShardApplicationTest" />
+      <option name="METHOD_NAME" value="bindingTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShardApplicationTest.shardingHintDB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-sharding-JDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xlhj.sharding.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.xlhj.sharding" />
+      <option name="MAIN_CLASS_NAME" value="com.xlhj.sharding.ShardApplicationTest" />
+      <option name="METHOD_NAME" value="shardingHintDB" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShardApplicationTest.transactionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-sharding-JDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xlhj.sharding.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.xlhj.sharding" />
+      <option name="MAIN_CLASS_NAME" value="com.xlhj.sharding.ShardApplicationTest" />
+      <option name="METHOD_NAME" value="transactionTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShardingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-sharding-JDBC" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xlhj.sharding.ShardingApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ShardApplicationTest.transactionTest" />
+        <item itemvalue="JUnit.ShardApplicationTest.addCourse" />
+        <item itemvalue="JUnit.ShardApplicationTest.bindingTest" />
+        <item itemvalue="JUnit.ShardApplicationTest.addDict" />
+        <item itemvalue="JUnit.ShardApplicationTest.shardingHintDB" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e04e62ad-a3aa-4bed-8223-4146ebe02674" name="Default Changelist" comment="" />
+      <created>1621903672725</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621903672725</updated>
+      <workItem from="1621903675851" duration="8678000" />
+      <workItem from="1621913206524" duration="15563000" />
+      <workItem from="1621935806724" duration="41168000" />
+      <workItem from="1622096147692" duration="196000" />
+      <workItem from="1622096493226" duration="5420000" />
+      <workItem from="1622109063571" duration="5719000" />
+      <workItem from="1622167422739" duration="3739000" />
+      <workItem from="1622173723793" duration="4113000" />
+      <workItem from="1622446992314" duration="1509000" />
+      <workItem from="1622615270733" duration="8722000" />
+      <workItem from="1622685026738" duration="40770000" />
+      <workItem from="1623047454879" duration="12582000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="233" y="2" key="#Console" timestamp="1622786552737">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="2" key="#Console/0.0.1280.680@0.0.1280.680" timestamp="1622786552737" />
+    <state x="228" y="17" key="#ShardApplicationTest.addCourse" timestamp="1621931807106">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="228" y="17" key="#ShardApplicationTest.addCourse/0.0.1280.680@0.0.1280.680" timestamp="1621931807106" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622167868409">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1622167868409" />
+    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1622691991171">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1622691991171" />
+    <state x="389" y="203" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1622785105323">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="389" y="203" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1622785105323" />
+    <state width="490" height="438" key="DebuggerActiveHint" timestamp="1622777454757">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="490" height="438" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1622777454757" />
+    <state x="421" y="99" key="FileChooserDialogImpl" timestamp="1623135305336">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1623135305336" />
+    <state width="1237" height="2" key="GridCell.Tab.0.bottom" timestamp="1622802212253">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1622802212253" />
+    <state width="1237" height="2" key="GridCell.Tab.0.center" timestamp="1622802212253">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1622802212253" />
+    <state width="1237" height="2" key="GridCell.Tab.0.left" timestamp="1622802212253">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1622802212253" />
+    <state width="1237" height="2" key="GridCell.Tab.0.right" timestamp="1622802212253">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1622802212253" />
+    <state width="1237" height="2" key="GridCell.Tab.1.bottom" timestamp="1622802212253">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1622802212253" />
+    <state width="1237" height="2" key="GridCell.Tab.1.center" timestamp="1622802212253">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1622802212253" />
+    <state width="1237" height="2" key="GridCell.Tab.1.left" timestamp="1622802212253">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1622802212253" />
+    <state width="1237" height="2" key="GridCell.Tab.1.right" timestamp="1622802212253">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="2" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1622802212253" />
+    <state width="1237" height="21" key="GridCell.Tab.2.bottom" timestamp="1622173692452">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="21" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1622173692452" />
+    <state width="1237" height="21" key="GridCell.Tab.2.center" timestamp="1622173692452">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="21" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1622173692452" />
+    <state width="1237" height="21" key="GridCell.Tab.2.left" timestamp="1622173692452">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="21" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1622173692452" />
+    <state width="1237" height="21" key="GridCell.Tab.2.right" timestamp="1622173692452">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="21" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1622173692452" />
+    <state x="337" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1622685024669">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="337" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1622685024669" />
+    <state x="335" y="0" width="895" height="548" key="find.popup" timestamp="1621930480356">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="335" y="0" width="895" height="548" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1621930480356" />
+    <state x="297" y="151" key="run.anything.popup" timestamp="1621935286221">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1621935286221" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1621932642353">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1621932642353" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/shardingsphere/sharding-core-api/4.1.1/sharding-core-api-4.1.1.jar!/org/apache/shardingsphere/api/config/sharding/TableRuleConfiguration.class</url>
+          <line>56</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/io/shardingsphere/sharding-core/3.1.0/sharding-core-3.1.0.jar!/io/shardingsphere/core/yaml/sharding/YamlShardingRuleConfiguration.class</url>
+          <line>31</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/io/shardingsphere/sharding-jdbc-core/3.1.0/sharding-jdbc-core-3.1.0.jar!/io/shardingsphere/shardingjdbc/jdbc/core/statement/ShardingPreparedStatement.class</url>
+          <line>104</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/io/shardingsphere/sharding-jdbc-core/3.1.0/sharding-jdbc-core-3.1.0.jar!/io/shardingsphere/shardingjdbc/jdbc/core/statement/ShardingPreparedStatement.class</url>
+          <line>157</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/io/shardingsphere/sharding-jdbc-core/3.1.0/sharding-jdbc-core-3.1.0.jar!/io/shardingsphere/shardingjdbc/jdbc/core/connection/ShardingConnection.class</url>
+          <line>23</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/io/shardingsphere/sharding-jdbc-core/3.1.0/sharding-jdbc-core-3.1.0.jar!/io/shardingsphere/shardingjdbc/jdbc/core/connection/ShardingConnection.class</url>
+          <line>37</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/zaxxer/HikariCP/3.4.5/HikariCP-3.4.5.jar!/com/zaxxer/hikari/HikariConfig.class</url>
+          <line>563</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/zaxxer/HikariCP/3.4.5/HikariCP-3.4.5.jar!/com/zaxxer/hikari/HikariConfig.class</url>
+          <line>549</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/xlhj/sharding/ShardApplicationTest.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xlhj/sharding/config/CoursePreciseShardingAlgorithm.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/xlhj/sharding/ShardApplicationTest.java</url>
+          <line>174</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/xlhj/sharding/ShardApplicationTest.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/xlhj/sharding/ShardApplicationTest.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xlhj/sharding/util/DateUtil.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xlhj/sharding/config/DatabaseHintShardingKeyAlgorithm.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/xlhj/sharding/ShardApplicationTest.java</url>
+          <line>150</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xlhj/sharding/config/DatabaseHintShardingKeyAlgorithm.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xlhj/sharding/config/TableHintShardingKeyAlgorithm.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/xlhj/sharding/config/TableHintShardingKeyAlgorithm.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/xlhj/sharding/ShardApplicationTest.java</url>
+          <line>138</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/xlhj/sharding/ShardApplicationTest.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/xlhj/sharding/ShardApplicationTest.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/xlhj/sharding/ShardApplicationTest.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/xlhj/sharding/ShardApplicationTest.java</url>
+          <line>212</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="Math.random() " language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/springboot_sharding_JDBC$ShardApplicationTest_addCourse.ic" NAME="ShardApplicationTest.addCourse Coverage Results" MODIFIED="1622714606472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.xlhj.sharding.*</FILTER>
+    </SUITE>
+  </component>
+</project>

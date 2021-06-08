@@ -1,0 +1,15 @@
+
+Z	java:S106!"9Replace this use of System.out or System.err by a logger.(¦¶§Ðûÿÿÿÿ8±Íæ±š/
+N	java:S106""9Replace this use of System.out or System.err by a logger.(¸ôÖ­
+X	java:S125$"<This block of commented-out lines of code should be removed.(ÏÅÓÁ8Å¨ÅÀš/
+u
+java:S1602-"SRemove useless curly braces around statement and then remove useless return keyword(ÛêÚÖþÿÿÿÿ8†“¿Àš/
+C
+java:S1068"&Remove this unused "sf" private field.(µ‡¨õ8ÝÃ³Àš/
+€
+java:S1488-"^Immediately return this expression instead of assigning it to the temporary variable "tables".(ÛêÚÖþÿÿÿÿ8ëÔÃÀš/
+R
+java:S1128	"5Remove this unused import 'java.text.ParseException'.(ñ®ï•8ë³Àš/
+<
+java:S2885"Make "sf" an instance variable.(µ‡¨õ8±Íæ±š/
+r	java:S117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á§ýðÿÿÿÿÿ8øñºÀš/

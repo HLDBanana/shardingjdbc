@@ -1,0 +1,2 @@
+#分布式主键自定义实现
+com.xlhj.sharding.config.SimpleShardingKeyGenerator

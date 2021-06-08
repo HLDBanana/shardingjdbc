@@ -1,0 +1,59 @@
+#水平分表配置
+spring:
+  main:
+    #允许名称相同的bean的覆盖(一个实体类对应多张表)
+    allow-bean-definition-overriding: true
+  shardingsphere:
+    props:
+      sql:
+        show: true
+    datasource:
+      # 数据源名称，多数据源以逗号分隔
+      names: m1
+      # names定义的数据源名称作为key（key不能包含下划线，否则无法识别配置）
+      m1:
+        url: jdbc:mysql://182.92.219.202:3306/sharding_db-1?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+        username: root
+        password: 15090667928Hh_
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        # 数据库连接池类名称  com.alibaba.druid.pool.DruidDataSource  com.zaxxer.hikari.HikariDataSource
+        type: com.alibaba.druid.pool.DruidDataSource
+    sharding:
+      tables:
+        # 表名
+        course:
+          key-generator:
+            column: id
+            #主键生成策略 可选内置的 SNOWFLAKE(雪花算法)/UUID
+            # 也可以自定义(实现ShardingKeyGenerator,并配置META-INF/services/org.apache.shardingsphere.spi.keygen.ShardingKeyGenerator) SIMPLE
+            type: SNOWFLAKE
+          #由数据源名 + 表名组成，以小数点分隔。多个表以逗号分隔，支持inline表达式。
+          #缺省表示使用已知数据源与逻辑表名称生成数据节点，用于广播表（即每个库中都需要一个同样的表用于关联查询，多为字典表）或只分库不分表且所有库的表结构完全一致的情况
+          actual-data-nodes: m1.course_$->{1..2}
+#          database-strategy:
+#            standard:
+#              precise-algorithm-class-name: com.xlhj.sharding.config.CoursePreciseShardingAlgorithm
+#              range-algorithm-class-name: com.xlhj.sharding.config.TableRangeShardAlgorithm
+#              sharding-column: create_time
+          #分片策略：单分片键
+          table-strategy:
+            inline:
+              #分片键
+              sharding-column: id
+              #数据分片规则
+              algorithm-expression: course_$->{id % 2 + 1}
+        course_detail:
+          key-generator:
+            column: id
+            #主键生成策略 可选内置的 SNOWFLAKE(雪花算法)/UUID
+            # 也可以自定义(实现ShardingKeyGenerator,并配置META-INF/services/org.apache.shardingsphere.spi.keygen.ShardingKeyGenerator) SIMPLE
+            type: SNOWFLAKE
+          #配置 t_order 表规则  ->{a..b}  a必须存在，否则分布式主键无法获取
+          actual-data-nodes: m1.course_detail_$->{1..2}
+          table-strategy:
+            inline:
+              # 绑定表分片字段要一致（外键字段）
+              sharding-column: course_id
+              algorithm-expression: course_detail_$->{course_id % 2 + 1}
+      # 绑定表规则列表（避免查询笛卡尔积），多套规则使用binding-tables[0],binding-tables[1]...
+      binding-tables[0]: course,course_detail

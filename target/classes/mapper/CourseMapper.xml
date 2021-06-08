@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xlhj.sharding.mapper.CourseMapper">
+
+<!--    <resultMap id="BaseResultMap" type="com.xlhj.sharding.entity.Course">-->
+<!--        <id column="id" property="id" />-->
+<!--        <result column="description" property="description" />-->
+<!--        <result column="create_time" property="createTime" />-->
+<!--    </resultMap>-->
+
+<!--    <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.xlhj.sharding.entity.Course">-->
+<!--        insert into course-->
+<!--        (-->
+<!--            name, status,create_time-->
+<!--        )-->
+<!--        values-->
+<!--        (-->
+<!--            #{name}, #{status},#{createTime}-->
+<!--        )-->
+<!--    </insert>-->
+
+
+    <select id="rangData" resultType="com.xlhj.sharding.entity.Course">
+        select * from course where id between 1 and 10
+    </select>
+
+    <select id="binding" resultType="com.xlhj.sharding.entity.Course">
+        <!-- select * from course left join course_detail on course.id = course_detail.course_id-->
+        select * from course c left join course_detail cd on c.id = cd.course_id
+        where c.id in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </select>
+</mapper>
