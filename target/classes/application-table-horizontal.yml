@@ -20,7 +20,7 @@ spring:
         type: com.alibaba.druid.pool.DruidDataSource
     sharding:
       tables:
-        # 表名
+        # 逻辑表名
         course:
           key-generator:
             column: id
@@ -28,7 +28,6 @@ spring:
             # 也可以自定义(实现ShardingKeyGenerator,并配置META-INF/services/org.apache.shardingsphere.spi.keygen.ShardingKeyGenerator) SIMPLE
             type: SNOWFLAKE
           #由数据源名 + 表名组成，以小数点分隔。多个表以逗号分隔，支持inline表达式。
-          #缺省表示使用已知数据源与逻辑表名称生成数据节点，用于广播表（即每个库中都需要一个同样的表用于关联查询，多为字典表）或只分库不分表且所有库的表结构完全一致的情况
           actual-data-nodes: m1.course_$->{1..2}
 #          database-strategy:
 #            standard:
@@ -56,4 +55,4 @@ spring:
               sharding-column: course_id
               algorithm-expression: course_detail_$->{course_id % 2 + 1}
       # 绑定表规则列表（避免查询笛卡尔积），多套规则使用binding-tables[0],binding-tables[1]...
-      binding-tables[0]: course,course_detail
+#      binding-tables[0]: course,course_detail

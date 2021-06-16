@@ -24,6 +24,10 @@ public class SimpleShardingKeyGenerator implements ShardingKeyGenerator {
     @Setter
     private Properties properties = new Properties();
 
+    /**
+     * 主键生成算法实现
+     * @return
+     */
     @Override
     public Comparable<?> generateKey() {
         return atomic.incrementAndGet();

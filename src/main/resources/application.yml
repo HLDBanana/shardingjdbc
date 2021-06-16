@@ -13,7 +13,7 @@ spring:
     # database-horizontal     水平分表分库
     # table-hint-horizontal   hint分片策略
     # table-vertical          垂直分表分库
-    # table-dict              操作公共表（字典表等）
+    # table-dict              广播表（字典表等）
     # table-horizontal        绑定表
     active: table-horizontal
   # jackson时间格式化

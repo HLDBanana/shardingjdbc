@@ -25,6 +25,9 @@ public class ShardingController {
     @Autowired
     private CourseMapper courseMapper;
 
+    /**
+     * 分库：分布式事务
+     */
     @Transactional
     @ShardingTransactionType(TransactionType.XA)  // 支持TransactionType.LOCAL, TransactionType.XA, TransactionType.BASE
     @GetMapping("/trans")
@@ -40,6 +43,6 @@ public class ShardingController {
         course1.setCreateTime(new Date());
         courseMapper.insert(course1);
         //模拟报错
-//        int b = 1/0;
+        int b = 1/0;
     }
 }

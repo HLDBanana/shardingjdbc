@@ -1,6 +1,8 @@
 package com.xlhj.sharding;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.xlhj.sharding.entity.*;
 import com.xlhj.sharding.mapper.*;
 import com.xlhj.sharding.util.DateUtil;
@@ -41,7 +43,7 @@ public class ShardApplicationTest {
     private TDictMapper dictMapper;
 
     /**
-     * 测试分表
+     * 测试分表新增数据
      */
     @Test
     public void addCourse() {
@@ -83,14 +85,11 @@ public class ShardApplicationTest {
     @Test
     public void findCourse() {
 
-       Course course = courseMapper.selectById(Long.valueOf("607168187053637632"));
-        log.info(course.toString());
-
         QueryWrapper<Course> queryWrapper1 = new QueryWrapper<Course>();
         //分区字段查询数据：若id只存在于一个表中，直接去当前表拿数据，不会去别的表中扫描数据
         //queryWrapper.in("id", Arrays.asList(Long.valueOf("604299009560936448"),Long.valueOf("604299062182674432")));
         //非分区字段查询：course_2库status全部置为0， 还是会从所有表中查询数据，然后汇总结果
-        queryWrapper1.eq("create_time", DateUtil.stringToDate("2021-05-26 11:39:05"));
+        queryWrapper1.eq("create_time", DateUtil.stringToDate("2021-06-10 16:48:06"));
         List<Course> list1 = courseMapper.selectList(queryWrapper1);
         log.info("数据量{}",list1.size());
         QueryWrapper<Course> queryWrapper2 = new QueryWrapper<Course>();
@@ -103,6 +102,33 @@ public class ShardApplicationTest {
         //queryWrapper.eq("status",1);
         List<Course> list2 = courseMapper.selectList(queryWrapper2);
         log.info("数据量{}",list2.size());
+
+    }
+
+    /**
+     * 分页查询（sql改写）
+     */
+    @Test
+    public void page() {
+
+        Page<Course> page = new Page(2,10);
+        //匹配多张分片表
+        QueryWrapper<Course> queryWrapper1 = new QueryWrapper<Course>();
+
+        queryWrapper1.between("create_time",
+                DateUtil.stringToDate("2021-01-26 11:39:05"),
+                DateUtil.stringToDate("2021-07-26 11:39:05"));
+        IPage<Course> res1 = courseMapper.selectPage(page,queryWrapper1);
+        log.info("~~~~~~~匹配多张分片表：{}",res1.getSize());
+
+        //匹配单张分片表
+        QueryWrapper<Course> queryWrapper2 = new QueryWrapper<Course>();
+
+        queryWrapper2.between("create_time",
+                DateUtil.stringToDate("2021-06-01 11:39:05"),
+                DateUtil.stringToDate("2021-06-30 11:39:05"));
+        IPage<Course> res2 = courseMapper.selectPage(page,queryWrapper2);
+        log.info("~~~~~~~匹配单张分片表：{}",res1.getSize());
 
     }
 
@@ -133,12 +159,14 @@ public class ShardApplicationTest {
 
     /**
      * 测试：更新分库字段
+     *  分库分表更新分库字段会报错
      */
     @Test
     public void update(){
-        Course course = courseMapper.selectById(Long.valueOf("604666077854564352"));
+        Course course = courseMapper.selectById(Long.valueOf("609793835857346560"));
         course.setStatus(course.getStatus() == 0 ? 1 : 0);
         course.setName("update");
+        course.setCreateTime(new Date());
         courseMapper.updateById(course);
     }
 
@@ -167,6 +195,7 @@ public class ShardApplicationTest {
         courseMapper.insert(course);
         HintManager.clear();
     }
+
     /**
      * 测试垂直分库
      */
@@ -193,6 +222,9 @@ public class ShardApplicationTest {
         dictMapper.insert(dict);
     }
 
+    /**
+     * 分库  分布式事务测试
+     */
     @Test
 //    @Rollback(value = false)
     @Transactional
@@ -200,17 +232,15 @@ public class ShardApplicationTest {
     public void transactionTest() {
         Course course = new Course();
         course.setName("java");
-        int rand = (int)(Math.random() * 10);
-        course.setStatus(rand % 2);
+        course.setStatus(0);
         course.setCreateTime(new Date());
         courseMapper.insert(course);
         Course course1 = new Course();
         course1.setName("java");
-        int rand1 = (int)(Math.random() * 10);
-        course1.setStatus(rand1 % 2 + 1);
+        course1.setStatus(1);
         course1.setCreateTime(new Date());
         courseMapper.insert(course1);
-        int a = 1/0;
+        //int a = 1/0;
     }
 
 

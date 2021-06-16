@@ -21,7 +21,7 @@
 
 
     <select id="rangData" resultType="com.xlhj.sharding.entity.Course">
-        select * from course where id between 1 and 10
+        select course.* from course where id between 1 and 10
     </select>
 
     <select id="binding" resultType="com.xlhj.sharding.entity.Course">
@@ -31,5 +31,8 @@
         <foreach collection="ids" item="id" open="(" separator="," close=")">
             #{id}
         </foreach>
+    </select>
+    <select id="avgVal" resultType="java.lang.Integer">
+        select avg(status) from course
     </select>
 </mapper>

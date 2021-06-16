@@ -40,6 +40,8 @@ public class DateUtil {
         List<String> list=  getYMBetweenDate(stringToDate("2020-05-12 00:00:00"),new Date());
         log.info("list size = {}",list.size());
     }
+
+
     /**
      * 获取两个日期之间的所有日期，格式为：yyyyMM
      * @param start
@@ -55,7 +57,7 @@ public class DateUtil {
 
         Calendar tempEnd = Calendar.getInstance();
         tempEnd.setTime(end);
-        tempEnd.add(Calendar.MONTH, +1);// 日期加1(包含结束)
+//        tempEnd.add(Calendar.MONTH, +1);// 日期加1(包含结束)
         while (tempStart.before(tempEnd)) {
             days.add(dateFormat.format(tempStart.getTime()));
             tempStart.add(Calendar.MONTH, 1);

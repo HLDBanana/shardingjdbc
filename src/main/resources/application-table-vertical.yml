@@ -11,14 +11,14 @@ spring:
       names: m1,m2
       m1:
         password: 15090667928Hh_
-        url: jdbc:mysql://182.92.219.202:3306/sharding_db-1?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+        url: jdbc:mysql://182.92.219.xxx:3306/sharding_db-1?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
         username: root
         driver-class-name: com.mysql.cj.jdbc.Driver
         # 数据库连接池类名称  com.alibaba.druid.pool.DruidDataSource  com.zaxxer.hikari.HikariDataSource
         type: com.alibaba.druid.pool.DruidDataSource
       m2:
         password: 15090667928Hh_
-        url: jdbc:mysql://182.92.219.202:3306/sharding_db-2?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+        url: jdbc:mysql://182.92.219.xxx:3306/sharding_db-2?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
         username: root
         driver-class-name: com.mysql.cj.jdbc.Driver
         # 数据库连接池类名称  com.alibaba.druid.pool.DruidDataSource  com.zaxxer.hikari.HikariDataSource

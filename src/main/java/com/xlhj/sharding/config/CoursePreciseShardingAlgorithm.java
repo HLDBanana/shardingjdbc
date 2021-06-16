@@ -20,8 +20,8 @@ public class CoursePreciseShardingAlgorithm implements PreciseShardingAlgorithm<
 
     /**
      * 按照 tablename_yyyyMM进行分表
-     * @param collection
-     * @param preciseShardingValue
+     * @param collection            分表列表
+     * @param preciseShardingValue  分片键 值
      * @return
      */
     @Override

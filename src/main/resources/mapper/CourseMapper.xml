@@ -21,7 +21,7 @@
 
 
     <select id="rangData" resultType="com.xlhj.sharding.entity.Course">
-        select * from course where id between 1 and 10
+        select course.* from course where id between 1 and 10
     </select>
 
     <select id="binding" resultType="com.xlhj.sharding.entity.Course">
